@@ -1,0 +1,308 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080710;
+    color: white;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    padding: 25px 8%;
+    position: absolute;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: 800;
+    text-decoration: none;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: #a855f7;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #bbb;
+    font-size: 14px;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: #b76aff;
+}
+
+.nav-btn {
+    text-decoration: none;
+    color: white;
+    border: 1px solid #a855f7;
+    padding: 12px 23px;
+    border-radius: 30px;
+    transition: .3s;
+}
+
+.nav-btn:hover {
+    background: #a855f7;
+    box-shadow: 0 0 25px #a855f7;
+}
+
+.menu {
+    display: none;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 120px 8% 100px;
+    overflow: hidden;
+}
+
+.glow {
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    background: #7c3aed;
+    filter: blur(180px);
+    opacity: .25;
+    border-radius: 50%;
+    animation: glowMove 6s infinite alternate;
+}
+
+@keyframes glowMove {
+    from { transform: translate(-100px, -40px); }
+    to { transform: translate(100px, 50px); }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+}
+
+.welcome, .section-label {
+    color: #b76aff;
+    letter-spacing: 5px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 8vw, 90px);
+    line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: -5px;
+}
+
+.hero h1 span, h2 span {
+    color: #a855f7;
+}
+
+.description {
+    color: #aaa;
+    max-width: 600px;
+    margin: 25px auto;
+    line-height: 1.9;
+    font-size: 15px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 35px;
+    flex-wrap: wrap;
+}
+
+.primary-btn, .secondary-btn {
+    padding: 16px 27px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.primary-btn {
+    background: #9333ea;
+    color: white;
+    box-shadow: 0 0 20px #9333ea55;
+}
+
+.primary-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 35px #9333ea;
+}
+
+.secondary-btn {
+    border: 1px solid #444;
+    color: white;
+}
+
+.secondary-btn:hover {
+    border-color: #a855f7;
+    color: #c084fc;
+}
+
+.hero-bottom {
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    gap: 50px;
+    color: #666;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.about, .services, .contact {
+    padding: 110px 8%;
+    text-align: center;
+}
+
+.about h2, .services h2, .contact h2 {
+    font-size: clamp(30px, 5vw, 55px);
+    margin-bottom: 25px;
+}
+
+.about > p:last-child {
+    color: #999;
+    max-width: 650px;
+    margin: auto;
+    line-height: 2;
+}
+
+.services {
+    background: #0d0b18;
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 55px;
+}
+
+.service-card {
+    text-align: left;
+    padding: 40px 30px;
+    border: 1px solid #272036;
+    background: #12101d;
+    border-radius: 15px;
+    transition: .4s;
+}
+
+.service-card:hover {
+    transform: translateY(-12px);
+    border-color: #a855f7;
+    box-shadow: 0 10px 40px #9333ea22;
+}
+
+.number {
+    color: #a855f7;
+    font-size: 14px;
+    margin-bottom: 35px;
+}
+
+.service-card h3 {
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.service-card p, .contact p {
+    color: #999;
+    line-height: 1.8;
+}
+
+.contact .primary-btn {
+    display: inline-block;
+    margin-top: 30px;
+}
+
+footer {
+    padding: 35px 8%;
+    border-top: 1px solid #222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+footer p {
+    color: #777;
+    font-size: 12px;
+}
+
+@media(max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 5%;
+        width: 90%;
+        background: #151020;
+        flex-direction: column;
+        padding: 30px;
+        border: 1px solid #38234e;
+        border-radius: 12px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .service-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-bottom {
+        gap: 15px;
+        font-size: 8px;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
